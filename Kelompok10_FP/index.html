@@ -60,6 +60,79 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<div class="jumbotron jumbotron-fluid" style="background-color: #03A678; text-align: center; color: white;">
+  <div class="container">
+    <h1 class="display-4">The Founders</h1>
+    <div class="img_founder"">
+      <div class="img_founders">img</div>
+      <div class="img_founders">img</div>
+      <div class="img_founders">img</div>
+    </div>
+  </div>
+</div>
+</div>
+<footer>
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Find Us</h3>
+                    <p class="text-justify">Anda dapat datang langsung untuk berkonsultasi dengan kami dengan petunjuk maps ini</p>
+                        <div id="googleMap" style="width:100%;height:400px;"></div>
+
+                        <script>
+                        function myMap() {
+                        var mapProp= {
+                            center:new google.maps.LatLng(-7.7597759,110.4088221),
+                            zoom:10,
+                        };
+                        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                        }
+                        </script>
+
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDau-FKtWQApNrIZcm-xadEJtrr7I9j51o&callback=myMap"></script>
+                </div>
+                <div class="col-md-6 text-justify">
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <hr>
+
+                    <h4><i class="fa fa-phone-square" aria-hidden="true"></i> Contact Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p>© 2002-2017 Weddingku</p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p>Privacy Policy | Term Of Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="bawah col-md-6">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </footer>
 	
 
  </body>
