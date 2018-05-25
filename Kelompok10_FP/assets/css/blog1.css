@@ -28,7 +28,7 @@
 .jumbotron {
 	color: black;
     background-size: cover;
-    background-image: url(../asset/home.jpg);
+    background-image: url(../img/home.jpg);
     width: 80%;
     margin-top: 50px;
 }
