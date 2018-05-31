@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/faq.css">
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl">
+
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding: 15px">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+            <a class="navbar-brand" href="index.html" >
+              <img src="assets/img/logo.jpg" alt="LOGO" width="50" height="50" style="margin-top: -15px">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+              <li><a href="#TentangKami">TENTANG KAMI</a></li>
+              <li><a href="#Pelatihan">PELATIHAN</a></li>
+              <li><a href="#Blog">BLOG</a></li>
+              <li><a href="#Agenda">AGENDA</a></li>
+              <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </div>
+      </div>
+  </nav>
+	<br><br><br>
+
+<div class="toggle">
+	<div class="toggle-title" ng-click="myFunc()">
+		<h3>What is the universe made of?</h3>
+	</div>
+
+	<div class="toggle-inner" ng-show="showMe">
+		<p>Astronomers face an embarrassing conundrum: they don't know what 95% of the universe is made of. Atoms, which form everything we see around us, only account for a measly 5%. Over the past 80 years it has become clear that the substantial remainder is comprised of two shadowy entities – dark matter and dark energy. The former, first discovered in 1933, acts as an invisible glue, binding galaxies and galaxy clusters together. Unveiled in 1998, the latter is pushing the universe's expansion to ever greater speeds. Astronomers are closing in on the true identities of these unseen interlopers.</p>
+	</div>
+</div>
+
+		
+</body>
+</html>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.showMe = false;
+    $scope.myFunc = function() {
+        $scope.showMe = !$scope.showMe;
+    }
+});
+</script>
