@@ -67,3 +67,44 @@
     color: #292b2c;
     background-color: lightblue;
 }
+
+
+.fa {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: white;
+    color: #068D67;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: white;
+    color: #068D67;
+}
+.fa-instagram {
+    background: white;
+    color: #068D67;
+}
+
+/* Twitter */
+.fa-youtube {
+    background: white;
+    color: #068D67;
+}
+.fa-chevron-circle-right{
+
+    color: #068D67;
+}
