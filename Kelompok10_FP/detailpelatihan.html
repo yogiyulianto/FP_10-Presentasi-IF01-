@@ -2,16 +2,18 @@
 <html>
 <head>
 	<title>Detail Pelatihan</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<link rel="stylesheet" type="text/css" href="assets/css/pelatihan.css">
+  	<link rel="stylesheet" type="text/css" href="assets/css/detailpelatihan.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style type="text/css">
   	
   </style>
 </head>
-<body>
+<body ng-app="BlankApp">
 	<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -31,6 +33,14 @@
         </div>
       </div>
   </nav><br><br>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+    	
   <div class="container-fluid">
   	<div class="gambar" style="width: 1250px;height: 400px;margin: 30px; background-image: url(assets/img/img1.jpg); background-repeat: no-repeat; "></div>
   <div class="tulisan_border" style="margin: auto; width: 30%;">
@@ -50,16 +60,113 @@
   </div>
   <br><br>
 
-  <div class="container-fluid" style="width: 1366px;height: 300px;background-color: #2EB690;">
-    <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="assets/img/user.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-  </div>
+  <div class="container-fluid" style="width: 100%;height: 500px;background-color: #2EB690;">
 
+<style type="text/css">
+	.box-card-view{
+		height: 300px;
+		width: 250px;
+		margin: auto;
+		background-color: #ffffff;
+		margin-top: 100px;
+		position: relative;
+		box-shadow: 0px 5px 25px 0 gray;
+		/*box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);*/
+		transition: all .3s ease;
+	}
+	.box-card-view:hover{
+		box-shadow: 0px 1px 1px gray;
+		padding-top: 110px;
+	}
+	.card-view{
+		position: absolute;
+		top: -50px;
+		left :29%;
+		/*margin:auto;*/
+		width: 250px;
+		/*margin-top: 20px;*/
+	}
+
+	.card-view img{
+		margin:auto;
+		width: 100px;
+	}
+	.text-detail{
+		position: absolute;
+		margin-top: 70px;
+		text-align: center;
+		width: 100%;
+	}
+</style>
+
+	<div class="box-card-view" id="card">
+	  	<div class="card-view" id="img-profil">
+	  		<img class="img-circle" id="img2" src="assets/img/user.jpg" alt="Avatar">\
+		</div>
+		<div class="text-detail">
+			<h4><b>John Doe</b></h4> 
+			<p>Architect & Engineer</p> 
+			<p id="response"></p>
+		</div>
+	</div>
+  </div>
+ <script type="text/javascript">
+	$( "#card" ).mouseover(function() {     
+	$( "#card" ).css( "background-color", "pink" );
+	$( "#img-profil" ).css( "top","10px" );
+	$( "#img-profil" ).css( "transition","all .3s ease" );
+	$( "#img-profil" ).css( "left","20%" );
+	$( "#img2" ).css( "transition","all .3s ease" );
+	$( "#img2" ).css( "width","150px" );
+	});
+
+	$( "#card" ).mouseout(function() {     
+	$( "#card" ).css( "background-color", "white" );
+	$( "#img-profil" ).css( "top","-50px" );
+	$( "#img-profil" ).css( "transition","all .3s ease" );
+	$( "#img-profil" ).css( "left","29%" );
+	$( "#img2" ).css( "transition","all .3s ease" );
+	$( "#img2" ).css( "width","100px" );
+	});
+
+
+ </script>
+<script type="text/javascript">
+	$.get("https://api.ipdata.co", function (response) {
+		// alert(JSON.stringify(response, null, 4));
+		var data_geo = JSON.stringify(response, null, 4);
+		var data_geo = JSON.parse(data_geo);
+		// alert(data_geo.ip);
+		$("#response").html(data_geo.ip);
+	}, "jsonp");
+</script>
+<script type="text/javascript">
+	// show_prompt();
+    function show_prompt() {
+        var name = prompt('Please enter your name','Poppy');
+        if (name != null && name != "") {
+
+        	//load api
+			$.get("https://api.ipdata.co", function (response) {
+				// alert(JSON.stringify(response, null, 4));
+				var data_geo = JSON.stringify(response, null, 4);
+				var data_geo = JSON.parse(data_geo);
+				// alert(data_geo);
+				// $("#response").html(data_geo.ip);
+
+				// show
+	        	var text = 'selamat datang '+name+
+	        	'\ndari '+data_geo.region;
+	            alert(text);
+
+			}, "jsonp");
+
+			// // show
+   //      	var text = 'selamat datang '+name+
+   //      	'\n dari '+data_geo.ip;
+   //          alert(text);
+        }
+    }
+</script>
 </body>
 </html>
