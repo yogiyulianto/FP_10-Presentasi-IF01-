@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AGENDA</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/blog1.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding: 15px">
+  		<div class="container">
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+      			<a class="navbar-brand" href="index.html" >
+      				<img src="assets/img/logo.jpg" alt="LOGO" width="50" height="50" style="margin-top: -15px">
+     			</a>
+    		</div>
+    	<div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+              <li><a href="./">TENTANG KAMI</a></li>
+              <li><a href="./Pelatihan.html">PELATIHAN</a></li>
+              <li><a href="./Blog.html">BLOG</a></li>
+              <li><a href="./Agenda.html">AGENDA</a></li>
+              <li><a href="./FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+  		</div>
+	</nav>
+<br><br><br><br><br><br><br><br><br><br>
+<center>
+<div id="calendar" style="width: 800px; height: 900px;"></div>
+</center>
+</body>
+<footer>
+</footer>
+
+
+<script type="text/javascript">
+$(function() {
+
+	$('#calendar').fullCalendar({
+
+	});
+});
+
+$('#calendar').fullCalendar({
+  events: [
+    {
+      title  : 'event1',
+      start  : '2018-06-01'
+    },
+    {
+      title  : 'event2',
+      start  : '2018-06-03',
+      end    : '2018-06-04'
+    }
+  ],
+  eventClick: function(event, element) {
+
+    window.location = "./Kelompok10_FP/Blog.html"
+
+  }
+});
+
+$('#calendar').fullCalendar({
+  eventClick: function(event, element) {
+
+    alert();
+
+  }
+});
+
+</script>
