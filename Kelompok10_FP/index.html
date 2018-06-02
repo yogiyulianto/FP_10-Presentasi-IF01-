@@ -163,6 +163,44 @@
            
         </div>
     </footer>
+
+    <script type="text/javascript">
+  $.get("https://api.ipdata.co", function (response) {
+    // alert(JSON.stringify(response, null, 4));
+    var data_geo = JSON.stringify(response, null, 4);
+    var data_geo = JSON.parse(data_geo);
+    // alert(data_geo.ip);
+    $("#response").html(data_geo.ip);
+  }, "jsonp");
+</script>
+<script type="text/javascript">
+    show_prompt();
+    function show_prompt() {
+        var name = prompt('Masukan nama anda','Poppy');
+        if (name != null && name != "") {
+
+          //load api
+      $.get("https://api.ipdata.co", function (response) {
+        // alert(JSON.stringify(response, null, 4));
+        var data_geo = JSON.stringify(response, null, 4);
+        var data_geo = JSON.parse(data_geo);
+        // alert(data_geo);
+        // $("#response").html(data_geo.ip);
+
+        // show
+            var text = 'selamat datang '+name +
+            ' dari '+data_geo.region + ' di website LAPPI';
+              alert(text);
+
+      }, "jsonp");
+
+      // // show
+   //       var text = 'selamat datang '+name+
+   //       '\n dari '+data_geo.ip;
+   //          alert(text);
+        }
+    }
+</script>
 	
 
  </body>
