@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/navigasi.css">
     <link rel="stylesheet" type="text/css" href="assets/css/blog1.css">
+    <script src="assets/js/blog.js"></script>
 
 </head>
 <body>
@@ -38,87 +40,80 @@
         <p>We specialize in blablabla</p> 
     </div>
   </center>
-  <div class="container-fluid text-center">
+<div class="container-fluid text-center">
       <h2><strong>Berita Terbaru</strong></h2>
       <h4>Mengenai LAPPI</h4>
       
-      <div class="container">
+      <div class="container" ng-app="app">
         <div class="row text-center" style="margin: 20px">
-          <div class="col-sm-4">
-            <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-4" ng-controller="ctrl">
+            <a href="" ng-click="redirect1()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss1.jpg);">
-                  <p><strong>Paris</strong><br>
-                    <span>Yes, we built Paris</span>
+                  <p><strong>Berita 1</strong><br>
+                    <span>Mengenai berita LAPPI 1</span>
                   </p>
                 </div>
               </a>
           </div>
-
-          <div class="col-sm-8">
-            <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-8" ng-controller="ctrl">
+            <a href="" ng-click="redirect2()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss2.jpg);">
-                  <p><strong>New York</strong><br>
-                    <span>We built New York</span>
-                  </p>
-                </div>
-            </a>
-          </div>
-
-          <div class="col-sm-8">
-              <a href="detailblog.html" style="text-decoration: none;">
-                <div class="thumbnail" style="background-image: url(assets/img/discuss3.jpg);">
-                  <p><strong>Paris</strong><br>
-                    <span>Yes, we built Paris</span>
-                  </p>
-                </div>
-            </a>
-          </div>
-
-          <div class="col-sm-4">
-            <a href="detailblog.html" style="text-decoration: none;">
-                <div class="thumbnail" style="background-image: url(assets/img/discuss4.jpg);">
-                  <p><strong>New York</strong><br>
-                    <span>We built New York</span>
+                  <p><strong>Berita 2</strong><br>
+                    <span>Mengenai berita LAPPI 2</span>
                   </p>
                 </div>
               </a>
           </div>
-
-          <div class="col-sm-4">
-            <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-8" ng-controller="ctrl">
+            <a href="" ng-click="redirect3()" style="text-decoration: none;">
+                <div class="thumbnail" style="background-image: url(assets/img/discuss3.jpg);">
+                  <p><strong>Berita 3</strong><br>
+                    <span>Mengenai berita LAPPI 3</span>
+                  </p>
+                </div>
+              </a>
+          </div>
+          <div class="col-sm-4" ng-controller="ctrl">
+            <a href="" ng-click="redirect4()" style="text-decoration: none;">
+                <div class="thumbnail" style="background-image: url(assets/img/discuss4.jpg);">
+                  <p><strong>Berita 4</strong><br>
+                    <span>Mengenai berita LAPPI 4</span>
+                  </p>
+                </div>
+              </a>
+          </div>
+          <div class="col-sm-4" ng-controller="ctrl">
+            <a href="" ng-click="redirect5()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss1.jpg);">
-                  <p><strong>Paris</strong><br>
-                    <span>Yes, we built Paris</span>
+                  <p><strong>Berita 5</strong><br>
+                    <span>Mengenai berita LAPPI 5</span>
                   </p>
                 </div>
               </a>
           </div>
-
-          <div class="col-sm-8">
-            <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-8" ng-controller="ctrl">
+            <a href="" ng-click="redirect6()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss2.jpg);">
-                  <p><strong>New York</strong><br>
-                    <span>We built New York</span>
+                  <p><strong>Berita 6</strong><br>
+                    <span>Mengenai berita LAPPI 6</span>
                   </p>
                 </div>
-            </a>
+              </a>
           </div>
-
-          <div class="col-sm-8">
-              <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-8" ng-controller="ctrl">
+            <a href="" ng-click="redirect7()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss3.jpg);">
-                  <p><strong>Paris</strong><br>
-                    <span>Yes, we built Paris</span>
+                  <p><strong>Berita 7</strong><br>
+                    <span>Mengenai berita LAPPI 7</span>
                   </p>
                 </div>
-            </a>
+              </a>
           </div>
-
-          <div class="col-sm-4">
-            <a href="detailblog.html" style="text-decoration: none;">
+          <div class="col-sm-4" ng-controller="ctrl">
+            <a href="" ng-click="redirect8()" style="text-decoration: none;">
                 <div class="thumbnail" style="background-image: url(assets/img/discuss4.jpg);">
-                  <p><strong>New York</strong><br>
-                    <span>We built New York</span>
+                  <p><strong>Berita 8</strong><br>
+                    <span>Mengenai berita LAPPI 8</span>
                   </p>
                 </div>
               </a>

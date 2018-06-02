@@ -1,4 +1,5 @@
 $('#calendar').fullCalendar({
+
   events: [
     {
       title  : 'Pelatihan Analisis',
