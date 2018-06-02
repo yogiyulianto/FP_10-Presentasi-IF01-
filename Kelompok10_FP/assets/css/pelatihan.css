@@ -47,8 +47,15 @@ body{
     color: #068D67;
 }
 
-gridListdemoBasicUsage md-grid-list {
-  margin: 8px; }
+.md-button {
+  color : currentColor;
+}
 
-.gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
+.md-button:not([disabled]):hover {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
+.md-button[disabled] {
+  color : rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
