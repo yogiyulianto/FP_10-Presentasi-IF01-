@@ -29,4 +29,18 @@ app.controller('myCtrl', function($scope) {
     $scope.myFunc6 = function() {
         $scope.showMe6 = !$scope.showMe6;
     }
+    $scope.showMe7 = false;
+    $scope.myFunc7 = function() {
+        $scope.showMe7 = !$scope.showMe7;
+    }
+
+    $scope.showMe8 = false;
+    $scope.myFunc8 = function() {
+        $scope.showMe8 = !$scope.showMe8;
+    }
+
+    $scope.showMe9 = false;
+    $scope.myFunc9 = function() {
+        $scope.showMe9 = !$scope.showMe9;
+    }
 });
