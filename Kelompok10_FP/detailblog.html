@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/navigasi.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/detailblog.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+    <link href="assets/css/navigasi.css">
+    <link href="assets/css/detailblog.css">
+    <script src="assets/js/blogangular.js"></script>
 
 </head>
 <body>
@@ -62,32 +64,37 @@
   <div style="background-color: #ECEDEE; text-align: center;">
      <h3 style="color: #13CE66">BERITA TERKAIT</h3>
      <hr style="width: 50px; height: 3px; background-color: #13CE66">
-
-  <div class="card">
-      <div class="tengah">
-      <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
-        <div class="images">
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
+     <center>
+  <div class="card" ng-app="app">
+      <div class="tengah" ng-controller="ctrl">
+        <a  href="" ng-click="redirect1()">
+            <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
+                <div class="images">
+                    <h4><b>John Doe</b></h4> 
+                    <p>Architect & Engineer</p> 
+                </div>
+        </a>
       </div>
-
-      <div class="tengah">
-      <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
-        <div class="images">
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
+        <div class="tengah" ng-controller="ctrl">
+        <a  href="" ng-click="redirect2()">
+            <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
+                <div class="images">
+                    <h4><b>John Doe</b></h4> 
+                    <p>Architect & Engineer</p> 
+                </div>
+        </a>
       </div>
-
-     <div class="tengah">
-     <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
-        <div class="images">
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
+        <div class="tengah" ng-controller="ctrl">
+        <a  href="" ng-click="redirect3()">
+            <img src="assets/img/discuss1.jpg" alt="Avatar" style="width:300px; height: 200px;">
+                <div class="images">
+                    <h4><b>John Doe</b></h4> 
+                    <p>Architect & Engineer</p> 
+                </div>
+        </a>
+      </div>
   </div>
-</div>
+  </center>
 
 
   <footer>
@@ -134,3 +141,4 @@
 
   </body>
 </html>
+    
