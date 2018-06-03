@@ -24,7 +24,7 @@ app.controller('ctrl', function ($scope, $log, $window) {
         var url = "detailblog.html";
         $window.location.href = url;
     };
-    $scope.redirect57 = function () {
+    $scope.redirect7 = function () {
         var url = "detailblog.html";
         $window.location.href = url;
     };
