@@ -108,7 +108,7 @@
 		<div class="text-detail">
 			<h4><b>John Doe</b></h4> 
 			<p>Architect & Engineer</p> 
-			<div id="penjelasan-instruktur" style="font-size: 10px;">
+			<div id="penjelasan-instruktur" style="font-size: 0px;">
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
 			</div> 
 		</div>
@@ -190,7 +190,7 @@
   // $( "#tulisan" ).css( "transition","all .3s ease" });
 </script>
  <script type="text/javascript">
-	$( "#card" ).mouseover(function() {     
+	$( "#card" ).mouseout(function() {     
 	$( "#card" ).css( "background-color", "white" );
 	$( "#img-profil" ).css( "top","10px" );
 	$( "#img-profil" ).css( "transition","all .3s ease" );
@@ -199,9 +199,10 @@
 	$( "#img2" ).css( "width","150px" );
 	$( "#penjelasan-instruktur" ).css( "transition","all .3s ease" );
 	$( "#penjelasan-instruktur" ).css( "font-size","0px" );
+	$( "#text-detail" ).css( "top","5px" );
 	});
 
-	$( "#card" ).mouseout(function() {     
+	$( "#card" ).mouseover(function() {     
 	$( "#card" ).css( "background-color", "white" );
 	$( "#img-profil" ).css( "top","-50px" );
 	$( "#img-profil" ).css( "transition","all .3s ease" );
