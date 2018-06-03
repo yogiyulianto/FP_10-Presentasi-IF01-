@@ -1,35 +1,7 @@
-/* Styles for page */ 
-.navbar {
-	margin-bottom: 0; 
-	background-color: white;
-	z-index: 9999;
-	border: 0;
-	font-size: 12px !important;
-	line-height: 1.42857143 !important;
-	letter-spacing: 4px;
-	border-radius: 0;
-}
-
-.navbar li a, .navbar .navbar-brand {
-
-	color: #13CE66 !important;
-}
-
-.navbar-nav li a:hover, .navbar-nav li.active a {
-	color: #fff !important;
-	background-color: #13CE66 !important;
-}
-
-.navbar-default .navbar-toggle {
-	border-color: transparent;
-	color: #fff !important;
-
-}
-
 .jumbotron {
 	color: black;
     background-size: cover;
-    background-image: url(../img/home.jpg);
+    background-image: url(../img/grapic3.jpg);
     width: 80%;
     margin-top: 50px;
 }
@@ -61,11 +33,11 @@
 }
 .toggle-inner{
     font-family: Lato,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: #292b2c;
-    background-color: lightblue;
+    background-color: white;
 }
 
 
